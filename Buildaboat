@@ -1,1 +1,1 @@
-print("coming soon")
+game.Players.localPlayer.Kick("Cookie hub: Coming soon.")
