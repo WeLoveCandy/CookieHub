@@ -5264,7 +5264,7 @@ local Visual = window:page({name = "Visual"})
 local Settings = window:page({name = "Settings"})
 
 -- Page
-local Main1 = Main:section({name = "// General \\", side = "left", size = 135})
+local Main1 = Main:section({name = "// General \\", side = "left", size = 132})
 local Main2 = Main:section({name = "// Settings \\", side = "right", size = 325})
 local Main3 = Main:section({name = "// Stats point \\", side = "right", size = 125})
 local Main4 = Main:section({name = "// Bosses \\", side = "left", size = 300})
