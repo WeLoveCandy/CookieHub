@@ -32,6 +32,7 @@ end)
 
 
 -- Window library
+
 local TweenService = game:GetService("TweenService")
 local object = cre
 local tweenInfo = TweenInfo.new(2.5)
@@ -63,7 +64,7 @@ ToggleButton.BorderSizePixel = 0
 ToggleButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ToggleButton.Size = UDim2.new(0, 50, 0, 50)
 ToggleButton.Font = Enum.Font.SourceSans
-ToggleButton.Text = "P/C"
+ToggleButton.Text = ""
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton.TextSize = 14.000
 ToggleButton.Draggable = true
@@ -1322,7 +1323,7 @@ function pages:section(props)
         }
     )
 
-    -- [[BackgroundTransparency = 1,
+    --[[BackgroundTransparency = 1,
 			BorderSizePixel = 0,
 			Size = UDim2.new(0.5,-5,1,0),
 			Position = UDim2.new(0,0,0,0),
@@ -1364,7 +1365,7 @@ function pages:section(props)
     --
     table.insert(self.library.themeitems["accent"]["BackgroundColor3"], color)
     --
-    -- [[local content = utility.new(
+    --[[local content = utility.new(
 		"Frame",
 		{
 			AnchorPoint = Vector2.new(0.5,1),
@@ -5284,7 +5285,6 @@ function sections:configloader(props)
     setmetatable(coPagenfigloader, configloaders)
     return configloader
 end
-
 
 local window =
     library:new(
