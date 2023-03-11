@@ -64,7 +64,7 @@ ToggleButton.BorderSizePixel = 0
 ToggleButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ToggleButton.Size = UDim2.new(0, 50, 0, 50)
 ToggleButton.Font = Enum.Font.SourceSans
-ToggleButton.Text = ""
+ToggleButton.Text = "X"
 ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton.TextSize = 14.000
 ToggleButton.Draggable = true
@@ -5286,20 +5286,37 @@ function sections:configloader(props)
     return configloader
 end
 
+Date = os.date("%d".." ".."%B".." ".."%Y")
 local window =
     library:new(
-    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Fluspe hub", color = Color3.fromRGB(3, 82, 255)}
+    {textsize = 13.5, font = Enum.Font.RobotoMono, name = "Fluspe hub"..date, color = Color3.fromRGB(3, 82, 255)}
 )
 
 -- Channel library
-local Main = window:page({name = "Main"})
+local General = window:page({name = "General"})
 local Combat = window:page({name = "Combat"})
 local Dungeon = window:page({name = "Dungeon"})
 local Island = window:page({name = "Island"})
 local Misc = window:page({name = "Misc"})
 
--- Select things
+-- Right/Left 
+local GeneralL= General:section({name = "General",side = "left",size = 300})
+local GeneralR = General:section({name = "Settings",side = "left",size = 300})
 
+-- Select things
+GeneralL:toggle(
+    {
+        name = "Automatic farm",
+        def = false,
+        callback = function(vu)
+            if vu == true then
+                print("True")
+            else
+                print("False")
+            end
+        end
+    }
+)
 
 
 return library
